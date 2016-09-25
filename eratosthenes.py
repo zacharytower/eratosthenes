@@ -1,5 +1,22 @@
 import math, itertools
 
+class PrimeDynamic(object):
+
+    def __init__(self):
+
+        self.prime_dict = {}
+
+    def prime(self, n):
+
+        while True:
+
+            try:
+                return self.prime_dict[n]
+
+            except KeyError:
+                self.prime_dict[n] = prime(n)
+
+            
 def eratosthenes(n):
 
     ''' Sieve of Eratosthenes.
@@ -68,5 +85,6 @@ def spd(n):
     for p in generate_primes(2):
         if n % p == 0:
             return p
+
 
     

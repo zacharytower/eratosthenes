@@ -86,5 +86,30 @@ def spd(n):
         if n % p == 0:
             return p
 
+def coprime(*args):
+    '''
+    Returns True if all the numbers in *args are coprime, False otherwise.
+    (Numbers are considered to be coprime if they DO NOT share a divisor greater
+    than 1. Ex. 7 and 2 are coprime, as their GCF is 1)
+    (Protip: the numerator and denominator of a reduced fraction are coprime)
+    '''
+
+    for possible_divisor in generate_primes(stop = min(args) + 1):
+
+        possible = True
+
+        for a in args:
+            if a % possible_divisor != 0: # number is not divisible by possible_divisor
+                possible = False
+                break
+
+        if possible == True:
+            return False # The numbers share a common divisor
+
+    return True # The numbers share no common divisors.
+
 
     
+print coprime(1,2,3,4)
+print coprime(5,10,15,20)
+print coprime(12, 56, 888)

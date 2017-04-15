@@ -109,7 +109,7 @@ def coprime(*args):
     return True # The numbers share no common divisors.
 
 
-    
+''' 
 print coprime(1,2,3,4)
 print coprime(5,10,15,20)
-print coprime(12, 56, 888)
+print coprime(12, 56, 888)'''

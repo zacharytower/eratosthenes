@@ -11,4 +11,3 @@ def totient(n):
 
 	return total
 
-print totient(9)

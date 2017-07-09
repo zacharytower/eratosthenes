@@ -10,3 +10,7 @@ def totient(n):
 			total += 1
 
 	return total
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd11e1ad55d7e4f6eaedf78680e6fd949032f6d7
